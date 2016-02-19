@@ -47,9 +47,9 @@ int main(void)
 	{
 		static uint32_t lcd_update_ms = 0;
 
-		if (uint32_time_diff(SYSTIMER_GetTime(), lcd_update_ms) >= 1000)
+		if (uint32_time_diff((SYSTIMER_GetTime() / 1000), lcd_update_ms) >= 1000)
 		{
-			lcd_update_ms = SYSTIMER_GetTime();
+			lcd_update_ms = (SYSTIMER_GetTime() / 1000);
 
 			static unsigned counter = 0;
 
@@ -116,11 +116,11 @@ uint32_t uint32_time_diff(uint32_t now, uint32_t before)
 
 void delay_microseconds(uint16_t us)
 {
-	const uint32_t systick_ms_start = SYSTIMER_GetTime();
+	const uint32_t systick_ms_start = SYSTIMER_GetTime() / 1000;
 
 	while (1)
 	{
-		uint32_t diff = uint32_time_diff(SYSTIMER_GetTime(), systick_ms_start);
+		uint32_t diff = uint32_time_diff((SYSTIMER_GetTime() / 1000), systick_ms_start);
 
 		if (diff >= ((uint32_t)us / 1000) + (us % 1000 ? 1 : 0))
 			break;

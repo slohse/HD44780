@@ -40,7 +40,7 @@
         </graphicsAlgorithm>
       </children>
     </children>
-    <children visible="true" active="true">
+    <children active="true">
       <properties key="SignalName" value="pin"/>
       <properties key="uri" value="http://resources/4.0.12/app/DIGITAL_IO/0/vs_digital_io_pad_pin"/>
       <graphicsAlgorithm xsi:type="al:Rectangle" lineWidth="1" filled="false" lineVisible="false" transparency="0.0" width="20" height="10" x="-20" y="30"/>
@@ -56,7 +56,7 @@
     </children>
     <children>
       <properties key="uri" value="http://resources/4.0.12/app/DIGITAL_IO/0/vs_digital_io_hwsel"/>
-      <graphicsAlgorithm xsi:type="al:Text" lineStyle="UNSPECIFIED" width="105" height="20" x="30" y="65" horizontalAlignment="ALIGNMENT_RIGHT" value="hardware pin control"/>
+      <graphicsAlgorithm xsi:type="al:Text" foreground="//@colors.2" lineStyle="UNSPECIFIED" width="105" height="20" x="30" y="65" style="//@styles.0/@styles.2" horizontalAlignment="ALIGNMENT_RIGHT" value="hardware pin control"/>
     </children>
   </children>
   <children xsi:type="pi:ContainerShape" visible="true" active="true">
@@ -765,6 +765,8 @@
   <colors red="227" green="238" blue="249"/>
   <colors red="255" green="255" blue="255"/>
   <colors/>
+  <colors red="192" green="192" blue="192"/>
+  <colors red="128" green="128" blue="128"/>
   <fonts name="Arial" size="8"/>
   <fonts name="Arial" size="8" bold="true"/>
 </pi:Diagram>
